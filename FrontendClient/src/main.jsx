@@ -1,11 +1,37 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Sesion from "./Pages/Sesion.jsx";
-import Registrer from "./Pages/Registrer.jsx";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Login from "./routes/Login.jsx";
+import Register from "./routes/SignUp.jsx";
+import MenuMain from "./routes/Menu.jsx";
+import ProtectedRoute from "./routes/ProtectedRoute.jsx";
+import {AuthProvider} from "./auth/AuthProvider.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Sesion />
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Login/>
+    },
+    {
+        path: '/SignUp',
+        element: <Register/>
+    },
+    {
+        path: '/',
+        element: <ProtectedRoute/>,
+        children: [
+            {
+            path: '/Menu',
+            element: <MenuMain/>
+            }
+        ]
+    }
+]);
 
-  </React.StrictMode>,
-)
+ReactDOM.createRoot( document.getElementById ( 'root' )).render (
+    <React.StrictMode>
+        <AuthProvider>
+            <RouterProvider router={router}/>
+        </AuthProvider>
+    </React.StrictMode>
+);
