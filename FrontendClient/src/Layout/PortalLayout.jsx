@@ -1,10 +1,10 @@
-// import {useAuth} from "../auth/AuthProvider.jsx";
+// import {useAuth} from "../Authentication/AuthProvider.jsx";
 // import React from "react";
 // import axios from "axios";
 // import error from "eslint-plugin-react/lib/util/error.js";
 //
 // export default function PortalLayout(){
-//     const auth = useAuth();
+//     const Authentication = useAuth();
 //     const handleSignOut = (e: React.MouseEvent<HTMLAnchorElement>) => {
 //         e.preventDefault();
 //         try {

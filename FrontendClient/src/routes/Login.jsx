@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import '../index.css'
 import {Link} from 'react-router-dom';
-import {useAuth} from "../auth/AuthProvider";
+import {useAuth} from "../Authentication/AuthProvider";
 import {Navigate} from "react-router-dom";
 //import axios from "axios";
 
 
 function Login() {
+    /*VALIDACION DEL USUARIO / */
     // const handleLogin = async () => {
     //     try {
     //         const response = await axios.post('URL_DE_LA_API/sesion', {
@@ -26,7 +27,7 @@ function Login() {
     //             console.log("Usuario o contraseña incorrecta");
     //         }
     //         // if (response.status === 200) {
-    //         //     auth.login();
+    //         //     Authentication.login();
     //         // } else {
     //         //     MensajeError.innerHTML = "Usuario o contraseña incorrecta";
     //         // }

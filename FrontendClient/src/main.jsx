@@ -5,7 +5,7 @@ import Login from "./routes/Login.jsx";
 import Register from "./routes/SignUp.jsx";
 import MenuMain from "./routes/Menu.jsx";
 import ProtectedRoute from "./routes/ProtectedRoute.jsx";
-import {AuthProvider} from "./auth/AuthProvider.jsx";
+import {AuthProvider} from "./Authentication/AuthProvider.jsx";
 
 const router = createBrowserRouter([
     {
