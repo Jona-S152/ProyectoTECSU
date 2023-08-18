@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import axios from 'axios';
 import '../index.css'
 
@@ -43,3 +43,4 @@ function Sesion() {
 }
 
 export default Sesion;
+*/
