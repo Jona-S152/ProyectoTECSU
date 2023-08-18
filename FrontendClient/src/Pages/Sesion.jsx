@@ -1,44 +1,52 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { useForm } from 'react-hook-form'
+import { loginUser } from "../api/login.api";
 import '../index.css'
+import { querystring } from "querystring";
 
-function Sesion() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+export function Sesion() {
 
-    const handleLogin = async () => {
-        const MensajeError = document.getElementById("MensajeError");
+    const {register, handleSubmit, formState: {
+        errors
+    }} = useForm()
+
+    const onSubmit = handleSubmit( async (data) => {
         try {
-            const response = await axios.post('URL_DE_LA_API/sesion', {
-                username,
-                password,
-            });
-            // Manejar la respuesta de la API (éxito o error)
+            const res = await loginUser(data)
+            console.log(res);
         } catch (error) {
-            // Mensaje del error
+            console.error('Error' , error);
         }
-    };
+    });
 
     return (
-        <div className={"Prueba"}>
-            <h2>Iniciar sesión</h2>
-            <p>Ingresa tu nombre de usuario:</p>
-            <input
-                type="text"
-                placeholder="Nombre de usuario"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <p>Ingresa tu contraseña:</p>
-            <input
-                type="password"
-                placeholder="Contraseña"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button onClick={handleLogin}>Iniciar sesión</button>
-            <span>¿No tienes una cuenta? <a href="/FrontendClient/src/Pages/Registrer.jsx">Regístrate</a></span>
-        </div>
+        <form method='POST' action='/login/' onSubmit={onSubmit}>
+            <div className={"Prueba"}>
+                <h2>Iniciar sesión</h2>
+                <p>Ingresa tu nombre de usuario:</p>
+                <input
+                    type="text"
+                    placeholder="Username"
+                    /*value={username}
+                    onChange={(e) => setUsername(e.target.value)}*/
+                    {...register("userName", {required: true})}
+                />
+                {errors.userName && <span>This username is required</span>}
+
+                <p>Ingresa tu contraseña:</p>
+                <input
+                    type="password"
+                    placeholder="Password"
+                    /*value={password}
+                    onChange={(e) => setPassword(e.target.value)}*/
+                    {...register("password", {required: true})}
+                />
+                {errors.password && <span>This password is required</span>}
+
+                <button /*onClick={handleLogin}*/>Iniciar sesión</button>
+            </div>
+        </form>
+        
     );
 }
 
