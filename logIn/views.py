@@ -33,8 +33,8 @@ def login_view(request):
 
         # Verificar la contraseña (debes aplicar tus propias técnicas de hashing y salting aquí)
         if user is not None:
-            return JsonResponse({'message': 'Autenticación exitosa'})
+            return JsonResponse({'success' : True})
         else:
-            return JsonResponse({'message': 'Credenciales inválidas'}, status=400)
+            return JsonResponse({'success' : False})
 
     return JsonResponse({'message': 'Solicitud inválida'}, status=400)
