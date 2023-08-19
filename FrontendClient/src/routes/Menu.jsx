@@ -1,5 +1,4 @@
 import Tarjetas from "../Components/TarjetasCursos.jsx";
-import React from "react";
 import DefaultLayout from "../Layout/DefaultLayout.jsx";
 
 function MenuMain () {
