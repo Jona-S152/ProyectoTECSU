@@ -1,10 +1,18 @@
 import React from "react";
+import SliderComponent from "../Components/Slider.jsx";
 
 const Variables = () => {
+    const variablesImg = [
+        "https://i.ibb.co/0jXJY5q/variables-1.png",
+        "https://i.ibb.co/0jXJY5q/variables-1.png",
+    ]
     return (
-        <div className="tipos-de-datos-page">
+        <div className="tiposVariables">
             <h1>Variables en la programación</h1>
-            <div className="tipos-de-datos-container">
+            <SliderComponent
+                imagenes={variablesImg}
+            />
+            <div className="containerVariables">
                 <p>
                     Una variable es un espacio en la memoria del ordenador donde se almacena un valor. Este valor puede
                     cambiar a lo largo de la ejecución del programa.

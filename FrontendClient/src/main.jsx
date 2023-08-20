@@ -9,6 +9,7 @@ import {AuthProvider} from "./Authentication/AuthProvider.jsx";
 import Class from "./Pages/Introduccion.jsx";
 import TiposDeDatosPage from "./Pages/class.jsx";
 import Variables from "./Pages/class2.jsx";
+import Introduccion from "./Pages/Introduccion.jsx";
 
 // const router = createBrowserRouter([
 //     {
@@ -37,5 +38,5 @@ ReactDOM.createRoot( document.getElementById ( 'root' )).render (
     //         <RouterProvider router={router}/>
     //     </AuthProvider>
     // </React.StrictMode>
-    <Variables/>
+    <MenuMain/>
 );

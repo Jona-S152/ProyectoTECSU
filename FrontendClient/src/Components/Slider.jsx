@@ -26,8 +26,8 @@ export default function SliderComponent({imagenes}){
                              id="slider__img" />
                         )}
                     </div>
-                )
-            })}
+                );
+            })};
             <button className="slider__btn slider__btn--left" onClick={siguienteImagenes}>&#60;</button>
         </section>
     )
