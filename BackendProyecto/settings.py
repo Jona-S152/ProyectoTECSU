@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'coreapi',
-    'logIn'
+    'logIn',
+    'calificacionesPruebas',
+    'rankingUsers'
 ]
 
 MIDDLEWARE = [
