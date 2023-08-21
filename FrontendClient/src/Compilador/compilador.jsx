@@ -45,6 +45,7 @@ function PythonRunner() {
         <div>
             <form>
         <textarea ref={codeRef} cols="40" rows="10">
+
         </textarea>
                 <br />
                 <button type="button" onClick={runit}>Ejecutar</button>
