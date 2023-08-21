@@ -9,6 +9,9 @@ export function Navigation() {
             <li>
                 <Link to={"/ranking"}>Ranking</Link>
             </li>
+            <li>
+                <Link to={"/minijuegos"}>Minijuegos</Link>
+            </li>
         </ul>
     );
 }

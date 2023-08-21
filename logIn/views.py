@@ -33,7 +33,9 @@ def login_view(request):
 
         # Verificar la contraseña (debes aplicar tus propias técnicas de hashing y salting aquí)
         if user is not None:
-            return JsonResponse({'success' : True})
+            # Obtener el userId del usuario autenticado
+            user_id = user.id
+            return JsonResponse({'success' : True, 'userId': user_id})
         else:
             return JsonResponse({'success' : False})
 

@@ -7,6 +7,7 @@ import { Navigate } from "react-router-dom";
 export function Sesion() {
 
     const [loggedIn, setLoggedIn] = useState(false);
+    const [userId, setUserId] = useState(null); // Nuevo estado para almacenar el ID del usuario
 
     const {register, handleSubmit, formState: {
         errors
@@ -17,6 +18,8 @@ export function Sesion() {
             const res = await loginUser(data);
             if (res.success){
                 setLoggedIn(true);
+                setUserId(res.userId);
+                localStorage.setItem('userId', res.userId); // Guardar el userId en el almacenamiento local
                 console.log(res);
             }
             else{
