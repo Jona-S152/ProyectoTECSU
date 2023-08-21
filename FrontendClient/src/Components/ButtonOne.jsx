@@ -1,4 +1,4 @@
-function ButtonOne({title, onClick}) {
+function ButtonOne({title}) {
   return <button>{title}</button>;
 }
 

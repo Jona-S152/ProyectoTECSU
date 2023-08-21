@@ -1,15 +1,7 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Login from "./routes/Login.jsx";
-import Register from "./routes/SignUp.jsx";
-import MenuMain from "./routes/Menu.jsx";
-import ProtectedRoute from "./routes/ProtectedRoute.jsx";
-import {AuthProvider} from "./Authentication/AuthProvider.jsx";
-import Class from "./Pages/Introduccion.jsx";
-import TiposDeDatosPage from "./Pages/class.jsx";
 import Variables from "./Pages/class2.jsx";
-import Introduccion from "./Pages/Introduccion.jsx";
+import Bucles from "./Pages/class3.jsx";
 
 // const router = createBrowserRouter([
 //     {
@@ -38,5 +30,5 @@ ReactDOM.createRoot( document.getElementById ( 'root' )).render (
     //         <RouterProvider router={router}/>
     //     </AuthProvider>
     // </React.StrictMode>
-    <MenuMain/>
+    <Bucles/>
 );
