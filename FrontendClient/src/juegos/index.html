@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Nota</title>
+</head>
+<body>
+    <h1>Mostrar Nota</h1>
+    <p>Tu nota final en el quiz es: <span id="finalScore"></span></p>
+    <p>Top 5 de notas:</p>
+    <ul id="topScores"></ul>
+    
+    <script>
+        var finalScore = localStorage.getItem('quizScore');
+        document.getElementById('finalScore').textContent = finalScore || "N/A";
+
+        var existingScores = [4, 3, 3, 2]; // Notas preexistentes
+        existingScores.push(parseInt(finalScore)); // Agregamos tu nota
+
+        function bubbleSort(arr) {
+            var n = arr.length;
+            for (var i = 0; i < n - 1; i++) {
+                for (var j = 0; j < n - i - 1; j++) {
+                    if (arr[j] < arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        bubbleSort(existingScores);
+
+        while (existingScores.length > 5) {
+            existingScores.pop();
+        }
+
+        var topScoresList = document.getElementById('topScores');
+        for (var i = 0; i < existingScores.length; i++) {
+            var listItem = document.createElement('li');
+            listItem.textContent = "Persona " + (i + 1) + ": Nota " + existingScores[i];
+            topScoresList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
