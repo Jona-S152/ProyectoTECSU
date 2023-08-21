@@ -9,7 +9,9 @@ function Tarjetas({imagen, Titulo, Descripcion}){
         <img src={imagen} alt="Imagen del curso"/>
         <h2>{Titulo}</h2>
         <p>{Descripcion}</p>
-        <ButtonOne title="Comenzar"/>
+        <ButtonOne
+            title="Comenzar"
+        />
     </div>
   );
 }

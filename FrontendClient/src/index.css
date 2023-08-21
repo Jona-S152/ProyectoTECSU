@@ -257,6 +257,10 @@ a:hover{
   padding: 20px;
 }
 
+.text span{
+    font-weight: bold;
+}
+
 .alias2{
   grid-row: 2/3;
 }
@@ -403,4 +407,49 @@ a:hover{
 .containerText.active{
   opacity: 1; /* Se vuelve visible */
   transform: translateY(0); /* Se desplaza hacia arriba */
+}
+
+/*Clase3*/
+.contenedorTextClass3{
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1C40F;
+  border-radius: 25px;
+  padding: 25px;
+  border-bottom: 5px;
+  margin: 60px;
+  box-shadow: 0 0 10px 0 #313131;
+}
+
+.contenedorPractica{
+  background-color: #2ECC71;
+  padding: 20px;
+border-radius: 25px;
+box-shadow: 0 0 10px 0 rgba(61, 61, 61, 0.7);
+  margin-bottom: 60px;
+}
+
+.contenedorEjercicio{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+}
+
+.contenedorEjercicio p{
+  text-align: center;
+  width: 80%;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 20px;
 }

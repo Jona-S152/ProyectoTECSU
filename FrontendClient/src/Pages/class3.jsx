@@ -1,5 +1,6 @@
 import SliderComponent from "../Components/Slider.jsx";
 import React from "react";
+import PythonRunner from "../Compilador/compilador.jsx";
 
 function Bucles (){
     const intro = [
@@ -20,6 +21,11 @@ function Bucles (){
         'http://localhost:5173/img/Bucles/While/While1.png',
         'http://localhost:5173/img/Bucles/While/While2.png',
     ]
+
+    const conclusion = [
+        'http://localhost:5173/img/Bucles/Conclusion/Conclusion1.png',
+        'http://localhost:5173/img/Bucles/Conclusion/Conclusion2.png',
+    ]
     return (
         <body className={'bodyclass'}>
         <div className="tipos-de-datos-page">
@@ -28,7 +34,7 @@ function Bucles (){
                     imagenes={intro}
                 />
 
-            <div className={"contenedorConcepto"}>
+            <div className={"contenedorTextClass3"}>
                 <h2 className={"subtituloClass"}>¿Qué son los bucles?</h2>
                 <SliderComponent
                     imagenes={concept}
@@ -41,23 +47,26 @@ function Bucles (){
                     Por ejemplo, si queremos imprimir 10 veces la palabra "Hola", podemos usar un bucle para no tener que escribir 10 veces la misma instrucción.
                 </p>
             </div>
-            <div className={"contenedorConcepto"}>
+            <div className={"contenedorTextClass3"}>
                 <h2 className={"subtituloClass"}>Bucle For</h2>
                 <SliderComponent
                     imagenes={bucleFor}
                 />
                 <p className={"text"}>
                     El bucle for es un bucle que se ejecuta un número determinado de veces, por ejemplo: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
-                    En programación se les conoce como <strong>for</strong>.
-                    Ademas, el bucle for tiene 3 partes:
-                    <ul>
-                        <li>La primera parte es la inicialización, donde se inicializa una variable.</li>
-                        <li>La segunda parte es la condición, donde se evalúa una condición.</li>
-                        <li>La tercera parte es el incremento, donde se incrementa la variable.</li>
-                    </ul>
+                    En programación se les conoce como <strong>for</strong>.<br/>
+                    <br/> Puedes ver un ejemplo de un bucle for en Python:<br/>
+                    <span>for i in range(10):
+                    print(i)</span>
+                    <br/>El código anterior imprimirá los números del 0 al 9, ya que el bucle for se ejecutará 10 veces.
+                    <br/>
                 </p>
+                <div>
+                    <h3>Escribe el ejemplo</h3>
+                    <PythonRunner/>
+                </div>
             </div>
-            <div className={"contenedorConcepto tema4"}>
+            <div className={"contenedorTextClass3"}>
                 <h2 className={"subtituloClass"}>El ciclo While</h2>
                 <SliderComponent
                     imagenes={bucleWhile}
@@ -70,8 +79,34 @@ function Bucles (){
                         <li>La primera parte es la condición, donde se evalúa una condición.</li>
                         <li>La segunda parte es el incremento, donde se incrementa la variable.</li>
                     </ul>
+                    <br/> Puedes ver un ejemplo de un bucle while en Python:<br/>
+                    <span className={"ejemplo"}>i = 0<br/>
+                    while i &#60; 10:<br/>
+                    print(i)<br/>
+                    i += 1</span>
                 </p>
+                <div>
+                    <h3>Escribe el ejemplo</h3>
+                    <PythonRunner/>
+                </div>
             </div>
+            <div className={"contenedorPractica"}>
+                <h2>Practiquemos un poco</h2>
+                <div className={"contenedorEjercicio"}>
+                    <p>
+                        Ahora que ya sabes como funcionan los bucles, vamos a practicar un poco.
+                        <br/>Escribe un programa que imprima los números del 1 al 10.
+                    </p>
+                    <p>
+                        Crea un ciclo for en cual se usen dos variables, "Nombre" y "apellido" y se muestre cinco veces.
+                    </p>
+                    <PythonRunner/>
+                    <PythonRunner/>
+                </div>
+            </div>
+            <SliderComponent
+                imagenes={conclusion}
+            />
         </div>
         </body>
     );

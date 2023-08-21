@@ -43,6 +43,7 @@ function MenuMain () {
                     imagen={'http://localhost:5173/img/Menu/final.jpg'}
                     Titulo={ "Taller" }
                     Descripcion={ "¿Seguro que aprendistes, vamos a ver?" }
+
                 />
             </div>
         </body>

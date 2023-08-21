@@ -2,6 +2,8 @@
 import ReactDOM from 'react-dom';
 import Variables from "./Pages/class2.jsx";
 import Bucles from "./Pages/class3.jsx";
+import PythonRunner from "./Compilador/compilador.jsx";
+import MenuMain from "./routes/Menu.jsx";
 
 // const router = createBrowserRouter([
 //     {

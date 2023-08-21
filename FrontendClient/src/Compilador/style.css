@@ -1,0 +1,28 @@
+textarea{
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 0 10px 0 rgba(101, 100, 100, 0.5);
+}
+
+textarea:focus{
+    outline: none;
+}
+
+pre{
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    width: 400px;
+    overflow: auto;
+}
+
+button{
+    margin: 20px;
+}
