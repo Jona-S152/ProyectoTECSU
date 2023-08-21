@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'coreapi',
     'logIn',
-    'calificacionesPruebas',
-    'rankingUsers'
+    'pruebasApp',
+    'rankingApp'
 ]
 
 MIDDLEWARE = [
