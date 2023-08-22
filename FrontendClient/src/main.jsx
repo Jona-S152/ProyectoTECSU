@@ -5,6 +5,7 @@ import Bucles from "./Pages/class3.jsx";
 import PythonRunner from "./Compilador/compilador.jsx";
 import MenuMain from "./routes/Menu.jsx";
 import Condicionales from "./Pages/class4.jsx";
+import Taller from "./Pages/class5.jsx";
 
 // const router = createBrowserRouter([
 //     {
@@ -33,5 +34,5 @@ ReactDOM.createRoot( document.getElementById ( 'root' )).render (
     //         <RouterProvider router={router}/>
     //     </AuthProvider>
     // </React.StrictMode>
-    <Condicionales/>
+    <Taller/>
 );
